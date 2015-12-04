@@ -76,7 +76,7 @@ function parStack(expr) {
 	var s = new Stack();
 	var c = [];
 	var arr = [];
-	for(i = 0, i <= expr.length, i++) {
+	for(i = 0; i <= expr.length; i++) {
 		var j = 0;
 		if(expr.substring(i - 1; i) == " ") {
 			j++;
@@ -84,7 +84,7 @@ function parStack(expr) {
 			c[j] += String(expr.substring(i-1; i));
 		}
 	}
-	for(i = 0, i <= arr.length, i++) {
+	for(i = 0; i <= arr.length; i++) {
 		if(c[i] == "(" || c[i] == "+" || c[i] == "-" || c[i] == "*" || c[i] == "+" || c[i] == "/") {
 			s.push(c[i]);
 		}else{
@@ -110,12 +110,13 @@ function parStack(expr) {
 			}
 		}
 	}
-	return v.pop;
+	res = v.pop
+	return res;
 }
 
 //Complessità Stack
 
-O(n)
+//O(n)
 
 
 //Tree
@@ -172,7 +173,7 @@ function searchNode(node, e) {
 }
 
 function arrayInTree(arrayA, bsTree) {
-	for(i = 0, i < arrayA.length - 1, i++) {
+	for(i = 0; i < arrayA.length - 1; i++) {
 		bsTree.add(arrayA[i]);
 	}
 }
